@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import Cloud from './components/Cloud';
-import Sun from './components/Bird';
-import Mountain from './components/Bird';
 
+import Mountain from './components/Mountain';
+import Sun from './components/Sun';
 class App extends Component {
   render() {
     return (
