@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './components/App';
-import Sun from './components/Sun';
+//import logo from './logo.svg';
+import sun from './images/Sun.png';
 
-class App extends Component {
+class Sun extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={Sun} className="App-logo" alt="logo" />
+          <img src={sun} className="App-logo" />
           
        
             
@@ -19,5 +18,5 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Sun;
 
