@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import cloud from './images/cloud.gif';
+import './App.css';
+
 class Cloud extends Component {
     render() {
         return (
           <div>
-              <p>Cloud Component Edit Here</p>
-              <img src={cloud}/>
+                <img className="Cloud" src={cloud}/>
 
           </div> 
         );

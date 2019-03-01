@@ -6,7 +6,10 @@
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
     "react-grid-system": "^4.4.2",
-    "react-scripts": "2.1.5"
+    "react-marquee": "^1.0.0",
+    "react-rain-animation": "^1.0.4",
+    "react-scripts": "2.1.5",
+    "react-spring": "^8.0.9"
   },
   "scripts": {
     "start": "react-scripts start",

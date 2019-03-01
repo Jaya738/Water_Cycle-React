@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import mount from './images/pmount.gif'
+import mount from './images/hill.png'
+import './App.css';
 class Mountain extends Component {
     render() {
         return (
            <div>
-            <p>This is your Mountain Component</p>
-            <img src={mount}/> 
+            <img className="Mountain" src={mount}/> 
             </div>
         );
     }

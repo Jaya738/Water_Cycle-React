@@ -1,23 +1,44 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
+.Cycle{
   background-color: #282c34;
+}
+
+.Container
+{
+ background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
+
+ 
 }
+.Cloud:hover{
+ 
+float:right;
+}
+.hill{
+  align-items: center; 
+}
+
+.Mountain {
+  width: 1000px;
+  height:600px;
+  bottom:0;
+}
+
+.App {
+  text-align: center;
+}
+
+.Sun {
+  animation: App-logo-spin infinite 20s linear;
+  height: 20vmin;
+  pointer-events: none;
+}
+
 
 .App-link {
   color: #61dafb;
