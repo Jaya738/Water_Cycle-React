@@ -15,12 +15,12 @@ class App extends Component {
     return (
  <div className='Cycle'>
    
-    <Button/>
-    <Button/>    
+        
   <Container className='Container' >
   <Row>
     <Col sm={4} xs={12} md={4} >
-        
+    <Button/>
+    <Button/><br/><br/><br/>
         <Cloud />
         <Mountain />
     </Col>
@@ -28,10 +28,12 @@ class App extends Component {
     
     <Col sm={4} xs={12} md={4}> 
         <Cloud />
+        <Cloud/><br/><br/>
     </Col>
 
     <Col sm={4} xs={12} md={4}>
      <Sun />
+     <Cloud/>
     </Col>
     
   </Row>
