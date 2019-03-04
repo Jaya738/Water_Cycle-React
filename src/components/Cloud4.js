@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import cloud from './images/c1.png';
+import cloud4 from './images/c4.png';
 import './App.css';
 
 
-class Cloud extends Component {
+class Cloud4 extends Component {
     render() {
         return (
           <div>
-                <img className="Cloud" src={cloud}/>
+                <img className="Cloud" src={cloud4}/>
 
           </div> 
         );
     }
 }
-export default Cloud;
+export default Cloud4;

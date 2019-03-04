@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import logo from './logo.svg';
-import sun from './images/Sun.png';
+import sun from './images/s.png';
 
 class Sun extends Component {
   render() {
@@ -8,10 +8,6 @@ class Sun extends Component {
       <div >
         <header >
           <img src={sun} className="Sun" />
-          
-       
-            
-          
         </header>
       </div>
     );
