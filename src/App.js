@@ -13,18 +13,23 @@ import Mountain from './components/Mountain';
 import Sun from './components/Sun';
 import Rain from './components/Rain';
 import Bird from './components/images/Bird.gif';
+import A1up from './components/A1up';
+import ReactRain from 'react-rain-animation';
+import "react-rain-animation/lib/style.css";
+
 
 class App extends Component {
   render() {
     return (
+      
   
 
  
    <div id="hero" className="Cycle" style={{backgroundImage:'url(' + Hill + ')'}}>
 
-
+  <ReactRain numDrops="500"></ReactRain>   
     <Container className='Container'>
-      
+    
       <Row justify='start'>
         
         <Col xs={4} >
@@ -43,6 +48,7 @@ class App extends Component {
 
       
       <Row>
+      
          <Col  xs={0.4}>
            <Sun />
          </Col>
@@ -52,7 +58,7 @@ class App extends Component {
             <Cloud2 />
           </Col>
 
-          <Col xs={1.}>
+          <Col xs={1}>
              <Cloud2 />
              <Cloud />
           </Col>
@@ -133,10 +139,11 @@ class App extends Component {
               <Button className="B1"></Button>
            </Col>
         </Row>
-    
+         
     </Container>
     
    </div>
+   
    
   
 
