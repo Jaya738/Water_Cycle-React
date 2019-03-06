@@ -18,12 +18,18 @@ import "react-rain-animation/lib/style.css";
 
 
 class App extends Component {
+   constructor(){
+      super();
+    this.state = {
+      childVisible: false
+   }
+}
+onClick() {
+   this.setState({childVisible: !this.state.childVisible});
+ }
   render() {
     return (
-      
-  
 
- 
    <div id="hero" className="Cycle" style={{backgroundImage:'url(' + Hill + ')'}}>
 
     
@@ -51,7 +57,10 @@ class App extends Component {
       <Row>
       
          <Col  xs={0.4}>
-           <Sun />
+         
+        {
+          this.state.childVisible ? <Sun /> : null
+        }
          </Col>
          
          <Col  xs={2}>
@@ -65,7 +74,7 @@ class App extends Component {
           </Col>
 
            <Col  xs={4} >
-              <Cloud/>
+              <Cloud />
                
              
            </Col>
@@ -77,7 +86,7 @@ class App extends Component {
           <Col xs={8}> </Col>
 
            <Col>
-              <Button className="B1"></Button>
+           
            </Col>
       </Row>
 
@@ -87,8 +96,8 @@ class App extends Component {
            <Col xs={8}>   </Col>
 
            <Col>
-              <Button className="B2">PHASE  1</Button>
-           </Col>
+           <Button onClick={() => this.onClick()} className="B2"> Hide/Show Sun </Button>
+                      </Col>
 
        </Row>
 
