@@ -21,61 +21,74 @@ class App extends Component {
    constructor(){
       super();
     this.state = {
-      childVisible: false
+      sun : true ,
+      cloud : false ,
+      rain : false 
    }
 }
-onClick() {
-   this.setState({childVisible: !this.state.childVisible});
+Phase1() {
+   this.setState({sun: true});
+   this.setState({cloud : false});
+   this.setState({rain: false});
  }
+Phase2() {
+   this.setState({sun: true});
+   this.setState({cloud : true});
+   this.setState({rain: false});
+}
+Phase3() {
+   this.setState({sun: false});
+   this.setState({cloud : true});
+   this.setState({rain: true});
+}
   render() {
     return (
 
    <div id="hero" className="Cycle" style={{backgroundImage:'url(' + Hill + ')'}}>
 
-    
+    <Row>
+    <Col sm={10}>
     <Container className='Container'>
-    
+     
       <Row justify='start'>
-        
-        <Col xs={4} >
-          <h1 className='Body'>aaaaaaaaaaaaaa</h1>
-        </Col>
-        
-        <Col xs={4}>
-          <h1 className='Body'>aaaaaaaaaaaaaa</h1>
-        </Col>
-
-        <Col xs={4} >
-        
-          <h1 className='Body'>aaaaaaaaaaaaaa</h1>
-          <ReactRain numDrops="1000"></ReactRain>
-        </Col>
-       
+      {
+          this.state.rain ?  <ReactRain numDrops="1000"></ReactRain> : null
+        }
+               
       </Row>
 
       
       <Row>
       
-         <Col  xs={0.4}>
+         <Col xs={0.4} sm={0.4}>
          
         {
-          this.state.childVisible ? <Sun /> : null
+          this.state.sun ? <Sun /> : null
         }
          </Col>
          
-         <Col  xs={2}>
-            <Cloud5 />
-            <Cloud2 />
+         <Col xs={2} sm={2}>
+         {
+          this.state.cloud ? <Cloud5 /> : null
+        }
+         {
+          this.state.cloud ? <Cloud2 /> : null
+        }
           </Col>
 
-          <Col xs={1}>
-             <Cloud2 />
-             <Cloud />
+          <Col xs={1} sm={1}>
+          {
+          this.state.cloud ? <Cloud2 /> : null
+        }
+         {
+          this.state.cloud ? <Cloud /> : null
+        }
           </Col>
 
-           <Col  xs={4} >
-              <Cloud />
-               
+           <Col  xs={4} sm={4}>
+           {
+          this.state.cloud ? <Cloud /> : null
+        }            
              
            </Col>
        </Row>
@@ -89,70 +102,25 @@ onClick() {
            
            </Col>
       </Row>
-
-
-      
-      <Row>
-           <Col xs={8}>   </Col>
-
-           <Col>
-           <Button onClick={() => this.onClick()} className="B2"> Hide/Show Sun </Button>
-                      </Col>
-
-       </Row>
-
-       <Row>
-           <Col xs={8}> </Col>
-
-           <Col>
-              <Button className="B2">PHASE  2</Button>
-           </Col>
-
-       </Row>
-
-       
-       
-       <Row>
-           <Col xs={8}> </Col>
-
-           <Col>
-              <Button className="B2">PHASE  3</Button>
-           </Col>
-        </Row>
-
-       
-       
-       <Row>
-           <Col xs={8}>  </Col>
-
-           <Col>
-              <Button className="B2">PHASE  4</Button>
-           </Col>
-        </Row>
-
-       
-       
-       <Row>
-           <Col xs={8}>
-           
-           </Col>
-
-           <Col>
-              <Button className="B2">PHASE-5</Button>
-           </Col>
-        </Row>
-
-
-        <Row>
-           <Col xs={8}>  </Col>
-
-           <Col>
-              <Button className="B1"></Button>
-           </Col>
-        </Row>
-         
-    </Container>
     
+    </Container>
+    </Col>
+    <Col sm={2}>
+
+    <Row>
+          
+           <Col sm={12} xs={12}>
+           <Button onClick={() => this.Phase1()} className="B2"> PHASE 1 </Button>
+            </Col>
+          <Col sm={12} xs={12}>
+           <Button onClick={() => this.Phase2()} className="B2"> PHASE 2 </Button>
+           </Col>
+           <Col sm={12} xs={12}>
+           <Button onClick={() => this.Phase3()} className="B2"> PHASE 3 </Button>
+           </Col>
+       </Row>
+      </Col>
+      </Row>
    </div>
    
    
