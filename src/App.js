@@ -23,23 +23,32 @@ class App extends Component {
     this.state = {
       sun : true ,
       cloud : false ,
-      rain : false 
+      rain : false,
    }
 }
 Phase1() {
    this.setState({sun: true});
    this.setState({cloud : false});
    this.setState({rain: false});
+ 
  }
 Phase2() {
    this.setState({sun: true});
    this.setState({cloud : true});
    this.setState({rain: false});
+
 }
 Phase3() {
    this.setState({sun: false});
    this.setState({cloud : true});
    this.setState({rain: true});
+
+}
+Phase4() {
+   this.setState({sun: false});
+   this.setState({cloud : true});
+   this.setState({rain: true});
+
 }
   render() {
     return (
@@ -110,13 +119,26 @@ Phase3() {
     <Row>
           
            <Col sm={12} xs={12}>
-           <Button onClick={() => this.Phase1()} className="B2"> PHASE 1 </Button>
+           {
+          <Button onClick={() => this.Phase1()} className="B2"> Evaporation </Button> 
+            }
             </Col>
           <Col sm={12} xs={12}>
-           <Button onClick={() => this.Phase2()} className="B2"> PHASE 2 </Button>
+          {
+           <Button onClick={() => this.Phase2()} className="B2"> Condensation </Button>
+          } 
            </Col>
            <Col sm={12} xs={12}>
-           <Button onClick={() => this.Phase3()} className="B2"> PHASE 3 </Button>
+           {
+           <Button onClick={() => this.Phase3()} className="B2"> Precipitation </Button>
+            }
+           
+           </Col>
+           <Col sm={12} xs={12}>
+           {
+          <Button onClick={() => this.Phase4()} className="B2"> Collection </Button>
+            }
+          
            </Col>
        </Row>
       </Col>
