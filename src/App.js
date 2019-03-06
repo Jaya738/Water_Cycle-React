@@ -8,10 +8,9 @@ import Cloud2 from './components/Cloud2';
 import Cloud3 from './components/Cloud3';
 import Cloud4 from './components/Cloud4';
 import Cloud5 from './components/Cloud5';
-import Hill from './components/images/w.png';
+import Hill from './components/images/Background.png';
 import Mountain from './components/Mountain';
 import Sun from './components/Sun';
-import Rain from './components/Rain';
 import Bird from './components/images/Bird.gif';
 import A1up from './components/A1up';
 import ReactRain from 'react-rain-animation';
@@ -27,7 +26,7 @@ class App extends Component {
  
    <div id="hero" className="Cycle" style={{backgroundImage:'url(' + Hill + ')'}}>
 
-  <ReactRain numDrops="500"></ReactRain>   
+    
     <Container className='Container'>
     
       <Row justify='start'>
@@ -41,7 +40,9 @@ class App extends Component {
         </Col>
 
         <Col xs={4} >
+        
           <h1 className='Body'>aaaaaaaaaaaaaa</h1>
+          <ReactRain numDrops="1000"></ReactRain>
         </Col>
        
       </Row>
@@ -65,7 +66,8 @@ class App extends Component {
 
            <Col  xs={4} >
               <Cloud/>
-              <Cloud5 />
+               
+             
            </Col>
        </Row>
 
