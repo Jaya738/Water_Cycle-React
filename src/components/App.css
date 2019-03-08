@@ -26,17 +26,18 @@
 }
 
 .B2 {
-  border-radius: 4px;
-  background-color: #f4511e;
+  
+  background-color: Transparent;
   border: none;
   color: #FFFFFF;
-  text-align: left;
+  text-align: center;
   font-size: 28px;
-  padding: 100px;
-  width: 570px;
+  padding: 0px;
+  width: 290px;
+  height: 238px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px 5px;
+  
 }
 
 .B1 {
@@ -75,6 +76,9 @@ float:right;
 
 .A1up:hover{
   float: right;
+  align-items:left;
+  -webkit-animation-name: mymove; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s;
 }
 
 .Sun {
