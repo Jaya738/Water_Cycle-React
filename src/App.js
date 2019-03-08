@@ -55,7 +55,7 @@ Phase3() {
 }
 Phase4() {
    this.setState({sun: false});
-   this.setState({cloud : true});
+   this.setState({cloud : false});
    this.setState({rain: false});
    this.setState({arrow: false });
 
@@ -112,8 +112,7 @@ Phase4() {
            </Col>
        </Row>
 
-       
-       
+            
       <Row>
            <Col xs={2}> 
              {this.state.arrow ? <A1up /> : null}
@@ -182,6 +181,7 @@ Phase4() {
            </Col>
       </Row>
     
+
     </Container>
     </Col>
     <Col sm={2}>
@@ -190,16 +190,12 @@ Phase4() {
           
            <Col sm={12} xs={12}>
            {
-          <Button className='B2' onClick={() => this.Phase1()}>
+            <Button className='B2' onClick={() => this.Phase1()}>
               <Flippy    
                 style={{ width: '290px', height: '238px' }}          
-                flipOnHover={false} // default false
-                flipOnClick={true} // default false
-                flipDirection="horizontal" // horizontal or vertical
-                ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-                                           // if you pass isFlipped prop component will be controlled component.
-                                           // and other props, which will go to div
-                                           /// these are optional style, it is not necessary 
+                flipOnHover={false} 
+                flipOnClick={true} 
+                flipDirection="horizontal"                  
                >
     
                 <FrontSide style={{backgroundColor: '#B0E0E6',borderWidth: '2px',borderStyle: 'solid',borderColor: 'orange'}}>
@@ -208,88 +204,87 @@ Phase4() {
          
                 <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
              
-            </Flippy> 
-          </Button>
+              </Flippy> 
+             </Button>
             
             }
-            </Col>
+           </Col>
+          
+          
           <Col sm={12} xs={12}>
-          {
-           <Button onClick={() => this.Phase2()} className="B2"> 
+           {
+            <Button onClick={() => this.Phase2()} className="B2"> 
                 <Flippy    
-                style={{ width: '290px', height: '238px' }}          
-                flipOnHover={false} // default false
-                flipOnClick={true} // default false
-                flipDirection="horizontal" // horizontal or vertical
-                ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-                                           // if you pass isFlipped prop component will be controlled component.
-                                           // and other props, which will go to div
-                                           /// these are optional style, it is not necessary 
-               >
+                  style={{ width: '290px', height: '238px' }}          
+                  flipOnHover={false} 
+                  flipOnClick={true} 
+                  flipDirection="horizontal" 
+                  >
     
-                <FrontSide style={{backgroundColor: '#B0E0E6',borderWidth: '2px',borderStyle: 'solid',borderColor: 'orange'}}>  
+                  <FrontSide style={{backgroundColor: '#B0E0E6',borderWidth: '2px',borderStyle: 'solid',borderColor: 'orange'}}>  
                    <img src={P2} style={{maxWidth:'100%' ,maxHeight:'100%'}} />  
-                </FrontSide>
+                  </FrontSide>
          
-                <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
+                 <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
              
-            </Flippy> 
-           </Button>
+                </Flippy> 
+            </Button>
           } 
            </Col>
+           
+           
            <Col sm={12} xs={12}>
-           {
-           <Button onClick={() => this.Phase3()} className="B2">  
+            {
+             <Button onClick={() => this.Phase3()} className="B2">  
                 <Flippy    
-                style={{ width: '290px', height: '238px' }}          
-                flipOnHover={false} // default false
-                flipOnClick={true} // default false
-                flipDirection="horizontal" // horizontal or vertical
-                ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-                                           // if you pass isFlipped prop component will be controlled component.
-                                           // and other props, which will go to div
-                                           /// these are optional style, it is not necessary 
-               >
+                  style={{ width: '290px', height: '238px' }}          
+                  flipOnHover={false} 
+                  flipOnClick={true} 
+                  flipDirection="horizontal"  
+                  >
     
-                <FrontSide style={{backgroundColor: '#B0E0E6',borderWidth: '2px',borderStyle: 'solid',borderColor: 'orange'}}>  
+                  <FrontSide style={{backgroundColor: '#B0E0E6',borderWidth: '2px',borderStyle: 'solid',borderColor: 'orange'}}>  
                     <img src={P3} style={{ maxWidth: '100%', maxHeight: '100%' }} /> 
-                </FrontSide>
+                  </FrontSide>
          
-                <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
+                  <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
              
-            </Flippy>
-           </Button>
+                </Flippy>
+            </Button>
             }
            
            </Col>
-           <Col sm={12} xs={12}>
-           {
-          <Button onClick={() => this.Phase4()} className="B2"> 
-              <Flippy    
-                style={{ width: '290px', height: '238px' }}          
-                flipOnHover={false} // default false
-                flipOnClick={true} // default false
-                flipDirection="horizontal" // horizontal or vertical
-                ref={(r) => this.flippy = r} // to use toggle method like this.flippy.toggle()
-                                           // if you pass isFlipped prop component will be controlled component.
-                                           // and other props, which will go to div
-                                           /// these are optional style, it is not necessary 
-               >
+           
+           
+          <Col sm={12} xs={12}>
+            {
+             <Button onClick={() => this.Phase4()} className="B2"> 
+                <Flippy    
+                  style={{ width: '290px', height: '238px' }}          
+                  flipOnHover={false} 
+                  flipOnClick={true} 
+                  flipDirection="horizontal"  
+                                           
+                 >
     
-                <FrontSide style={{backgroundColor: '#B0E0E6',borderWidth: '2px',borderStyle: 'solid',borderColor: 'orange'}}>  
+                 <FrontSide style={{backgroundColor: '#B0E0E6',borderWidth: '2px',borderStyle: 'solid',borderColor: 'orange'}}>  
                     <img src={P4} style={{ maxWidth: '100%', maxHeight: '100%' }} /> 
-                </FrontSide>
+                 </FrontSide>
          
-                <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
+                 <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
              
-            </Flippy>
-            </Button>
+                </Flippy>
+             </Button>
             }
           
            </Col>
+       
        </Row>
+      
       </Col>
+      
       </Row>
+   
    </div>
    
    
