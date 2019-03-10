@@ -13,6 +13,8 @@ import Mountain from './components/Mountain';
 import Sun from './components/Sun';
 import Bird from './components/images/Bird.gif';
 import A1up from './components/A1up';
+import A2Down from './components/A2Down';
+import A2Left from './components/A2Left';
 import ReactRain from 'react-rain-animation';
 import "react-rain-animation/lib/style.css";
 import Flippy, { FrontSide, BackSide } from 'react-flippy';
@@ -28,36 +30,45 @@ class App extends Component {
     this.state = {
       sun : false ,
       cloud : false ,
+      cloud3 : false,
       rain : false,
       arrow : false,
+      arrow2 : false,
    }
 }
 Phase1() {
    this.setState({sun: true});
    this.setState({cloud : false});
+   this.setState({cloud3 : false});
    this.setState({rain: false});
    this.setState({arrow: true});
+   this.setState({arrow2 : false});
  
  }
 Phase2() {
    this.setState({sun: true});
    this.setState({cloud : true});
+   this.setState({cloud3 : false});
    this.setState({rain: false});
    this.setState({arrow: false});
-
+   this.setState({arroe22: false})
 }
 Phase3() {
    this.setState({sun: false});
    this.setState({cloud : true});
+   this.setState({cloud3 : true});
    this.setState({rain: true});
    this.setState({arrow: false});
+   this.setState({arrow2: false});
 
 }
 Phase4() {
    this.setState({sun: false});
    this.setState({cloud : false});
+   this.setState({cloud3 : false});
    this.setState({rain: false});
    this.setState({arrow: false });
+   this.setState({arrow2: true});
 
 }
   render() {
@@ -69,52 +80,96 @@ Phase4() {
     <Col sm={10}>
     <Container className='Container'>
      
-      <Row justify='start'>
-      {
+     <Row justify='start'>
+       {
           this.state.rain ?  <ReactRain numDrops="1000"></ReactRain> : null
         }
-               
-      </Row>
+     </Row>
+         
+        <Row>
+           
+            <Col xs={0} sm={0} > { this.state.sun ? <Sun> <Cloud /> </Sun> : null } </Col>
+            <Col xs={10}>{this.state.cloud ? <Cloud /> : null}
+                
+              <Row>
+         
+                
+                <Col xs={2.2}> {this.state.arrow ? null : null} </Col >
+                <Col xs={2.4}> {this.state.arrow ? <A1up /> : null} </Col >
+                <Col xs={2.4}> {this.state.arrow ? <A1up /> : null} </Col >
+                <Col xs={2.4}> {this.state.arrow ? <A1up />: null} </Col >
+                <Col xs={2.4}> {this.state.arrow ? <A1up />: null} </Col >
+
+            </Row>
+
+            <Row>
+              
+              <Col xs={1}>
+                { this.state.cloud3 ? <Cloud5 /> : null}
+              </Col>
+
+              <Col xs={3}>
+                { this.state.cloud3 ? <Cloud /> : null}              </Col>
+
+            </Row>
+          </Col>
+        
+
+        </Row>
 
       
-      <Row>
       
-         <Col xs={0.4} sm={0.4}>
-         
-        {
-          this.state.sun ? <Sun /> : null
-        }
-         </Col>
-         
-         <Col xs={2} sm={2}>
-         {
-          this.state.cloud ? <Cloud5 /> : null
-        }
-         {
-          this.state.cloud ? <Cloud2 /> : null
-        }
-          </Col>
-
-          <Col xs={1} sm={1}>
-          {
-          this.state.cloud ? <Cloud2 /> : null
-        }
-         {
-          this.state.cloud ? <Cloud /> : null
-        }
-          </Col>
-
-           <Col  xs={4} sm={4}>
-           {
-          this.state.cloud ? <Cloud /> : null
-        }            
-             
-           </Col>
-       </Row>
-
             
       <Row>
            <Col xs={2}> 
+             
+             {this.state.arrow ? <A1up /> : null}
+             
+           </Col >
+
+           <Col xs={2}>
+           {this.state.arrow ? <A1up /> : null}
+           </Col>
+
+           <Col xs={2}>
+            {this.state.arrow ? <A1up /> : null}
+           </Col>
+
+           <Col xs={2}>
+            {this.state.arrow ? <A1up /> : null}
+           </Col>
+
+           <Col xs={2}>
+            {this.state.arrow ? <A1up /> : null}
+           </Col>
+      </Row>
+
+
+      <Row>
+           <Col xs={2}> 
+             {this.state.arrow ? <A1up /> : null}
+           </Col >
+
+           <Col xs={2}>
+           {this.state.arrow ? <A1up /> : null}
+           </Col>
+
+           <Col xs={2}>
+            {this.state.arrow ? <A1up /> : null}
+           </Col>
+
+           <Col xs={2}>
+            {this.state.arrow ? <A1up /> : null}
+           </Col>
+
+           <Col xs={2}>
+            {this.state.arrow ? <A1up /> : null}
+           </Col>
+      </Row>
+
+
+      <Row>
+           <Col xs={2}> 
              {this.state.arrow ? <A1up /> : null}
            </Col >
 
@@ -180,6 +235,25 @@ Phase4() {
             {this.state.arrow ? <A1up /> : null}
            </Col>
       </Row>
+
+
+      <Row>
+          <Col xs={7}>
+              
+          </Col>
+           
+           <Col xs={3}>
+              {this.state.arrow2 ? <A2Down /> : null }
+          </Col>
+
+       </Row> 
+    
+       <Row>
+          <Col xs={10}>
+              {this.state.arrow2 ? <A2Left /> : null }      
+          </Col>
+        
+       </Row> 
     
 
     </Container>
