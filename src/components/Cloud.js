@@ -10,7 +10,7 @@ class Cloud extends Component {
     render() {
         return (
           <div>
-               <marquee behavior={"slide"} direction={"right"} scrollamount={"5"}> 
+               <marquee behavior={"slide"} direction={"right"} scrollamount={"25"}> 
                    <img className="Cloud" src={cloud}/>
                    <img className="Cloud" src={cloud}/>
 

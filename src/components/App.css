@@ -58,7 +58,7 @@
   cursor: pointer;
   margin: 5px 2px;
 }
-.Cloud:hover{
+.Cloud{
  
 float:right;
 }
@@ -79,7 +79,7 @@ float:right;
   text-align: center;
 }
 
-.A1up:hover{
+.A1up{
   float: right;
   align-items:left;
   -webkit-animation-name: mymove; /* Safari 4.0 - 8.0 */

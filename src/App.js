@@ -81,41 +81,24 @@ Phase4() {
     <Container className='Container'>
      
      <Row justify='start'>
-       {
+        <Col xs={5.5}></Col>
+        
+        <Col>
+        {
           this.state.rain ?  <ReactRain numDrops="1000"></ReactRain> : null
-        }
+         }
+         </Col>
      </Row>
          
         <Row>
            
-            <Col xs={0} sm={0} > { this.state.sun ? <Sun> <Cloud /> </Sun> : null } </Col>
-            <Col xs={10}>{this.state.cloud ? <Cloud /> : null}
-                
-              <Row>
-         
-                
-                <Col xs={2.2}> {this.state.arrow ? null : null} </Col >
-                <Col xs={2.4}> {this.state.arrow ? <A1up /> : null} </Col >
-                <Col xs={2.4}> {this.state.arrow ? <A1up /> : null} </Col >
-                <Col xs={2.4}> {this.state.arrow ? <A1up />: null} </Col >
-                <Col xs={2.4}> {this.state.arrow ? <A1up />: null} </Col >
-
-            </Row>
-
-            <Row>
-              
-              <Col xs={1}>
-                { this.state.cloud3 ? <Cloud5 /> : null}
-              </Col>
-
-              <Col xs={3}>
-                { this.state.cloud3 ? <Cloud /> : null}              </Col>
-
-            </Row>
-          </Col>
-        
-
+            <Col xs={0} sm={0} > { this.state.sun ? <Sun /> : null } </Col>
+            <Col xs={8} xs={10}>{this.state.cloud ? <Cloud /> : null}  </Col>
         </Row>
+
+        <Row>
+             <Col xs={9.8}> {this.state.cloud ? <Cloud />: null} </Col >
+         </Row>
 
       
       
@@ -127,7 +110,7 @@ Phase4() {
              
            </Col >
 
-           <Col xs={2}>
+           <Col xs={2} >
            {this.state.arrow ? <A1up /> : null}
            </Col>
 
@@ -140,99 +123,99 @@ Phase4() {
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
       </Row>
 
 
       <Row>
            <Col xs={2}> 
-             {this.state.arrow ? <A1up /> : null}
+             {this.state.arrow ? null : null}
            </Col >
 
            <Col xs={2}>
-           {this.state.arrow ? <A1up /> : null}
+           {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
       </Row>
 
 
       <Row>
            <Col xs={2}> 
-             {this.state.arrow ? <A1up /> : null}
+             {this.state.arrow ? null : null}
            </Col >
 
            <Col xs={2}>
-           {this.state.arrow ? <A1up /> : null}
+           {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
       </Row>
 
 
       <Row>
            <Col xs={2}> 
-             {this.state.arrow ? <A1up /> : null}
+             {this.state.arrow ? null : null}
            </Col >
 
            <Col xs={2}>
-           {this.state.arrow ? <A1up /> : null}
+           {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
       </Row>
 
 
       <Row>
            <Col xs={2}> 
-             {this.state.arrow ? <A1up /> : null}
+             {this.state.arrow ? null : null}
            </Col >
 
            <Col xs={2}>
-           {this.state.arrow ? <A1up /> : null}
+           {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
 
            <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
+            {this.state.arrow ? null : null}
            </Col>
       </Row>
 
@@ -258,6 +241,7 @@ Phase4() {
 
     </Container>
     </Col>
+   
     <Col sm={2}>
 
     <Row>
@@ -312,8 +296,8 @@ Phase4() {
              <Button onClick={() => this.Phase3()} className="B2">  
                 <Flippy    
                   style={{ width: '290px', height: '238px' }}          
-                  flipOnHover={false} 
-                  flipOnClick={true} 
+                  flipOnHover={true} 
+                  flipOnClick={false} 
                   flipDirection="horizontal"  
                   >
     
@@ -321,7 +305,7 @@ Phase4() {
                     <img src={P3} style={{ maxWidth: '100%', maxHeight: '100%' }} /> 
                   </FrontSide>
          
-                  <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
+                  <BackSide style={{ backgroundColor: '#175852'}}>  EVAPORATION </BackSide>
              
                 </Flippy>
             </Button>
@@ -336,7 +320,7 @@ Phase4() {
                 <Flippy    
                   style={{ width: '290px', height: '238px' }}          
                   flipOnHover={false} 
-                  flipOnClick={true} 
+                  flipOnClick={true}
                   flipDirection="horizontal"  
                                            
                  >
