@@ -128,14 +128,14 @@ Phase4() {
               
           </Col>
            
-           <Col xs={3}>
+           <Col xs={0}>
               {this.state.arrow2 ? <A2Down /> : null }
           </Col>
 
        </Row> 
     
        <Row>
-          <Col xs={10}>
+          <Col xs={8}>
               {this.state.arrow2 ? <A2Left /> : null }      
           </Col>
         
@@ -192,7 +192,7 @@ Phase4() {
             </Button>
           } 
            </Col>
-           
+          
            
            <Col sm={12} xs={12}>
             {
