@@ -85,7 +85,7 @@ Phase4() {
         
         <Col>
         {
-          this.state.rain ?  <ReactRain numDrops="1000"></ReactRain> : null
+          this.state.rain ?  <ReactRain numDrops="2000"></ReactRain> : null
          }
          </Col>
      </Row>
@@ -104,120 +104,23 @@ Phase4() {
       
             
       <Row>
-           <Col xs={2}> 
+           <Col xs={1.5}> 
              
              {this.state.arrow ? <A1up /> : null}
              
            </Col >
 
-           <Col xs={2} >
+           <Col xs={1.5} >
            {this.state.arrow ? <A1up /> : null}
            </Col>
 
-           <Col xs={2}>
+           <Col xs={1.5}>
             {this.state.arrow ? <A1up /> : null}
            </Col>
 
-           <Col xs={2}>
-            {this.state.arrow ? <A1up /> : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
+           
       </Row>
 
-
-      <Row>
-           <Col xs={2}> 
-             {this.state.arrow ? null : null}
-           </Col >
-
-           <Col xs={2}>
-           {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-      </Row>
-
-
-      <Row>
-           <Col xs={2}> 
-             {this.state.arrow ? null : null}
-           </Col >
-
-           <Col xs={2}>
-           {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-      </Row>
-
-
-      <Row>
-           <Col xs={2}> 
-             {this.state.arrow ? null : null}
-           </Col >
-
-           <Col xs={2}>
-           {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-      </Row>
-
-
-      <Row>
-           <Col xs={2}> 
-             {this.state.arrow ? null : null}
-           </Col >
-
-           <Col xs={2}>
-           {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-
-           <Col xs={2}>
-            {this.state.arrow ? null : null}
-           </Col>
-      </Row>
 
 
       <Row>

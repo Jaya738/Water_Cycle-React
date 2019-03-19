@@ -28,5 +28,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://code.swecha.org/KLUGLUG/water-cycle"
+  },
+  "author": "",
+  "license": "ISC"
 }
