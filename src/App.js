@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './components/App.css';
 import {Button} from 'semantic-ui-react';
 import { Container, Row, Col } from 'react-grid-system';
-
 import Cloud from './components/Cloud';
 import Cloud2 from './components/Cloud2';
 import Cloud3 from './components/Cloud3';
@@ -22,7 +21,7 @@ import P1 from './components/images/p1.png';
 import P2 from './components/images/p2.png';
 import P3 from './components/images/p3.png';
 import P4 from './components/images/p4.png';
-
+import Delay from 'react-delay';
 
 class App extends Component {
    constructor(){
@@ -38,7 +37,7 @@ class App extends Component {
 }
 Phase1() {
    this.setState({sun: true});
-   this.setState({cloud : false});
+   this.setState({cloud : true});
    this.setState({cloud3 : false});
    this.setState({rain: false});
    this.setState({arrow: true});
@@ -93,7 +92,7 @@ Phase4() {
         <Row>
            
             <Col xs={0} sm={0} > { this.state.sun ? <Sun /> : null } </Col>
-            <Col xs={8} xs={10}>{this.state.cloud ? <Cloud /> : null}  </Col>
+            <Col xs={8} xs={10}>{this.state.cloud ?  <Delay wait={3000}> <Cloud /> </Delay> : null}  </Col>
         </Row>
 
         <Row>
@@ -121,8 +120,6 @@ Phase4() {
            
       </Row>
 
-
-
       <Row>
           <Col xs={7}>
               
@@ -133,14 +130,16 @@ Phase4() {
           </Col>
 
        </Row> 
-    
+  
+  
        <Row>
           <Col xs={8}>
-              {this.state.arrow2 ? <A2Left /> : null }      
+              {this.state.arrow2 ? <Delay wait={3000}> <A2Left /> </Delay> : null }      
           </Col>
         
        </Row> 
     
+
 
     </Container>
     </Col>
