@@ -10,23 +10,20 @@ class A2Left extends Component {
            <div> 
            
             
-            <marquee direction={"left"} scrollamount={"100"}>
-                <img src={a3} /> 
-                <img src={a3} /> 
-                <img src={a3} /><br /> 
-            </marquee>
+          
 
-            <marquee direction={"left"} scrollamount={"100"}>
+            <marquee direction={"left"} scrollamount={"50"}>
+                <img src={a3} /> 
+                <img src={a3} /> 
+                <img src={a3} /> <br />
+            </marquee>
+            <marquee direction={"left"} scrollamount={"50"}>
                 <img src={a3} /> 
                 <img src={a3} /> 
                 <img src={a3} /> <br />
             </marquee>
 
-            <marquee direction={"left"} scrollamount={"100"}>
-                <img src={a3} /> 
-                <img src={a3} /> 
-                <img src={a3} />
-            </marquee> 
+           
             </div>
                      
              );

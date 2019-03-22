@@ -31,7 +31,9 @@
   ],
   "description": "",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "react-delay": "^0.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://code.swecha.org/KLUGLUG/water-cycle"

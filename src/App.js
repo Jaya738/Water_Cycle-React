@@ -133,8 +133,8 @@ Phase4() {
   
   
        <Row>
-          <Col xs={8}>
-              {this.state.arrow2 ? <Delay wait={3000}> <A2Left /> </Delay> : null }      
+          <Col xs={7}>
+              {this.state.arrow2 ? <Delay wait={1500}> <A2Left /> </Delay> : null }      
           </Col>
         
        </Row> 
