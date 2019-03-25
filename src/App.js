@@ -10,7 +10,7 @@ import Cloud5 from './components/Cloud5';
 import Hill from './components/images/bcollection.png';
 import Mountain from './components/Mountain';
 import Sun from './components/Sun';
-import Bird from './components/images/Bird.gif';
+import Bird from './components/Bird.js';
 import A1up from './components/A1up';
 import A2Down from './components/A2Down';
 import A2Left from './components/A2Left';
@@ -33,6 +33,7 @@ class App extends Component {
       rain : false,
       arrow : false,
       arrow2 : false,
+      bird : false,
    }
 }
 Phase1() {
@@ -42,6 +43,7 @@ Phase1() {
    this.setState({rain: false});
    this.setState({arrow: true});
    this.setState({arrow2 : false});
+   this.setState({bird : false});
  
  }
 Phase2() {
@@ -51,6 +53,7 @@ Phase2() {
    this.setState({rain: false});
    this.setState({arrow: false});
    this.setState({arroe22: false})
+   this.setState({bird : false});
 }
 Phase3() {
    this.setState({sun: false});
@@ -59,6 +62,7 @@ Phase3() {
    this.setState({rain: true});
    this.setState({arrow: false});
    this.setState({arrow2: false});
+   this.setState({bird : false});
 
 }
 Phase4() {
@@ -68,27 +72,31 @@ Phase4() {
    this.setState({rain: false});
    this.setState({arrow: false });
    this.setState({arrow2: true});
-
+   this.setState({bird : true});
 }
   render() {
     return (
-
+    
    <div id="hero" className="Cycle" style={{backgroundImage:'url(' + Hill + ')'}}>
 
     <Row>
     <Col sm={10}>
     <Container className='Container'>
      
-     <Row justify='start'>
-        <Col xs={5.5}></Col>
+     <Row >
+        <Col xs={8}></Col>
         
-        <Col>
+        <Col xs={2}>
         {
-          this.state.rain ?  <ReactRain numDrops="2000"></ReactRain> : null
+          this.state.rain ?  <ReactRain numDrops="1000" />: null
          }
          </Col>
      </Row>
-         
+    
+     <Row>
+     <Col xs ={12}>{this.state.bird ?<Bird /> : null}</Col>
+     </Row>
+      
         <Row>
            
             <Col xs={0} sm={0} > { this.state.sun ? <Sun /> : null } </Col>
@@ -121,11 +129,11 @@ Phase4() {
       </Row>
 
       <Row>
-          <Col xs={7}>
+          <Col xs={8}>
               
           </Col>
            
-           <Col xs={0}>
+          <Col xs={0}>
               {this.state.arrow2 ? <A2Down /> : null }
           </Col>
 
@@ -133,6 +141,7 @@ Phase4() {
   
   
        <Row>
+       
           <Col xs={7}>
               {this.state.arrow2 ? <Delay wait={1500}> <A2Left /> </Delay> : null }      
           </Col>
@@ -162,7 +171,7 @@ Phase4() {
                     <img src={P1} style={{ maxWidth: '100%', maxHeight: '100%' }} />
                 </FrontSide>
          
-                <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
+                <BackSide style={{ backgroundColor: '#175852'}}>  EVAPORATION </BackSide>
              
               </Flippy> 
              </Button>
@@ -185,7 +194,7 @@ Phase4() {
                    <img src={P2} style={{maxWidth:'100%' ,maxHeight:'100%'}} />  
                   </FrontSide>
          
-                 <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
+                 <BackSide style={{ backgroundColor: '#175852'}}>  CONDENSATION </BackSide>
              
                 </Flippy> 
             </Button>
@@ -198,8 +207,8 @@ Phase4() {
              <Button onClick={() => this.Phase3()} className="B2">  
                 <Flippy    
                   style={{ width: '290px', height: '238px' }}          
-                  flipOnHover={true} 
-                  flipOnClick={false} 
+                  flipOnHover={false} 
+                  flipOnClick={true} 
                   flipDirection="horizontal"  
                   >
     
@@ -207,7 +216,7 @@ Phase4() {
                     <img src={P3} style={{ maxWidth: '100%', maxHeight: '100%' }} /> 
                   </FrontSide>
          
-                  <BackSide style={{ backgroundColor: '#175852'}}>  EVAPORATION </BackSide>
+                  <BackSide style={{ backgroundColor: '#175852'}}>  PRECIPITATION </BackSide>
              
                 </Flippy>
             </Button>
@@ -231,7 +240,7 @@ Phase4() {
                     <img src={P4} style={{ maxWidth: '100%', maxHeight: '100%' }} /> 
                  </FrontSide>
          
-                 <BackSide style={{ backgroundColor: '#175852'}}>  DATA </BackSide>
+                 <BackSide style={{ backgroundColor: '#175852'}}>  COLLECTION </BackSide>
              
                 </Flippy>
              </Button>
