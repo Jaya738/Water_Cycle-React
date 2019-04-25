@@ -10,9 +10,9 @@ class Bird extends Component {
     render() {
         return (
     
-               <marquee behavior={"slide"} direction={"left"} scrollamount={"25"}> 
+               <marquee behavior={"scroll"} direction={"left"} scrollamount={"25"}> 
                    <img  src={bird}/>
-                   <img  src={bird}/>
+                  
 
                 </marquee>
 

@@ -1,0 +1,145 @@
+.arrow{
+  padding:0px;
+  font-size:20px;
+}
+
+.Analog{
+  background-color:grey;
+  text-align:left;
+}
+
+
+.Body{
+  background-color:  #FFBD00;
+  text-align:left;
+
+}
+.Cycle{
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  min-height: 1000px;
+  background-color:skyblue;
+  
+  
+}
+
+.Container
+{
+  min-width:1920px;
+  align-items: left;
+}
+
+.B2 {
+  
+  background-color: Transparent;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 0px;
+  width: 290px;
+  height: 238px;
+  transition: all 0.5s;
+  cursor: pointer;
+  
+}
+
+.B1 {
+    border-radius: 4px;
+  background-color: #FFBD00;
+  border: none;
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 28px;
+  padding: 20px;
+  width: 570px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px 2px;
+}
+.Cloud{
+ 
+float:right;
+}
+.hill{
+  align-items: center; 
+}
+
+.Mountain {
+
+    width: 151px;
+  height: 41px;
+  margin-right: 10px;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+}
+
+.App {
+  text-align: center;
+}
+
+.A1up{
+  float: right;
+  align-items:left;
+  -webkit-animation-name: mymove; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 5s;
+}
+
+.Sun {
+  animation: App-logo-spin infinite 20s linear;
+  height: 20vmin;
+  pointer-events: none;
+	 
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+body {
+background:#0D343A;
+background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(#000000)  );
+background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1) 100%);
+
+overflow:hidden;}
+
+
+.drop {
+  background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
+  background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
+	width:1px;
+	height:89px;
+	position: absolute;
+	bottom:200px;
+	-webkit-animation: fall .63s linear infinite;
+  -moz-animation: fall .63s linear infinite;
+  
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+	to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+	to {margin-top:900px;}
+}
+
